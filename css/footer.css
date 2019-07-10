@@ -1,0 +1,68 @@
+.footer-font{
+  font-size:0.8rem;
+}
+
+@media (min-width:576px){
+  .mywidth{
+    width:80%;
+    height:148px;
+  }
+  .mycode{
+    width:47%;
+    height:120px;
+  }
+  .footer-font{
+    font-size:0.5rem;
+  }
+  .font{
+    font-size:0.8rem;
+  }
+}
+@media (min-width:768px){
+  .mywidth{
+    width:65%;
+    height:148px;
+  }
+  .mycode{
+    width:47%;
+    height:120px;
+  }
+  .footer-font{
+    font-size:0.5rem;
+  }
+  .font{
+    font-size:0.8rem;
+  }
+}
+@media (min-width:992px){
+  .mywidth{
+    width:50%;
+    height:148px;
+  }
+  .mycode{
+    width:40%;
+    height:120px;
+  }
+  .footer-font{
+    font-size:0.8rem;
+  }
+  .font{
+    font-size:1rem;
+  }
+}
+@media (min-width:1200px){
+  .mywidth{
+    width:42%;
+    height:148px;
+  }
+  .mycode{
+    width:48%;
+    height:148px;
+  }
+  .footer-font{
+    font-size:0.8rem;
+  }
+  .font{
+    font-size:1rem;
+  }
+}
