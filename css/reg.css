@@ -1,0 +1,93 @@
+.mypic-width{
+  width:110px;
+  height:110px;
+}
+.login-font{
+  font-size: 1.6rem;
+}
+.ml{
+  margin-left:5rem;
+}
+.contain{
+  width:500px;
+  border:1px solid #e8ae76;
+  margin-left:418px;
+  margin-top: 50px;
+}
+.Img{
+  width:20px;
+}
+input{
+  width:300px;
+  border-radius: 5px;
+}
+table{
+  height:350px;
+}
+.regBtn{
+  width:80px;
+  height:45px;
+  color: #000;
+  background: #e8ae76;
+  border-radius: 5px;
+  float: right;
+  text-align: center;
+  line-height: 45px;
+}
+.regBtn:hover{
+  text-decoration: none;
+  color:#000;
+}
+.top{
+  background: #e8ae76;
+}
+.smallLeft,.smallRight{
+  width:80px;
+  position: absolute;
+}
+.img1{
+  top:195px;
+  left:21px;
+  transform: rotate(-16deg);
+}
+.img2{
+  top:243px;
+  left:120px;
+  transform: rotate(-18deg);
+}
+.img3{
+  top:284px;
+  left:220px;
+  transform: rotate(-22deg);
+}
+.img4{
+  top:323px;
+  left:324px;
+  transform: rotate(-25deg);
+}
+.img5{
+  top:323px;
+  right:337px;
+  transform: rotate(25deg);
+}
+.img6{
+  top:284px;
+  right:231px;
+  transform: rotate(22deg);
+}
+.img7{
+  top:243px;
+  right:128px;
+  transform: rotate(18deg);
+}
+.img8{
+  top:195px;
+  right:29px;
+  transform: rotate(16deg);
+}
+.spanImg1,.spanImg2,.spanImg3,.spanImg4,.spanImg5{
+  width:20px;
+  height:20px;
+  margin-top: -10px;
+  display:none;
+}

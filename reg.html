@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/comm.css">
+  <link rel="stylesheet" href="css/reg.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+  <div class="d-flex flex-row ml">
+    <img class="mypic-width" src="img/login/logo4.jpg">
+    <p class="mb-0 pt-4 login-font ml-3">欢迎注册蜜悦账号</p>
+  </div>
+  <div class="bg-contain">
+    <div class="contain">
+      <p class="top">用户注册</p>
+      <table>
+          <tr>
+            <td>
+              <img class="Img" src="img/reg/用户.png">用户名：
+            </td>
+            <td>
+              <input class="unametxt" type="text" placeholder="请输入3-10位数字字母">
+              <span>
+                <img class="spanImg1" src="img/reg/true.jpg">
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img class="Img" src="img/reg/密码.png">密码：
+            </td>
+            <td>
+              <input class="pwdtxt" type="password" placeholder="请输入6-12位数字字母">
+              <span>
+                <img class="spanImg2" src="img/reg/true.jpg">
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img class="Img" src="img/reg/邮箱.png">邮箱：
+            </td>
+            <td>
+              <input class="emailtxt" type="text">
+              <span>
+                <img class="spanImg3" src="img/reg/true.jpg">
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img class="Img" src="img/reg/地址.png">地址：
+            </td>
+            <td>
+              <input class="addresstxt" type="text">
+              <span>
+                <img class="spanImg4" src="img/reg/true.jpg">
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img class="Img" src="img/reg/联系方式电话.png">联系方式：
+            </td>
+            <td>
+              <input class="phonetxt" type="text">
+              <span>
+                <img class="spanImg5" src="img/reg/true.jpg">
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <a href="javascript:;" class="regBtn">注册</a>
+            </td>
+          </tr>
+      </table>
+    </div>
+      <img class="smallLeft img1" src="img/reg/坚果.jpg">
+      <img class="smallLeft img2" src="img/reg/葡萄干.jpg">
+      <img class="smallLeft img3" src="img/reg/饼干.jpg">
+      <img class="smallLeft img4" src="img/reg/sweet.jpg">
+      <img class="smallRight img5" src="img/reg/巧克力.jpg">
+      <img class="smallRight img6" src="img/reg/巴旦木.jpg">
+      <img class="smallRight img7" src="img/reg/果干.jpg">
+      <img class="smallRight img8" src="img/reg/棉花糖.jpg">
+  </div>
+  <footer>
+    <iframe class="footer" src="footer.html" frameborder="0" scrolling="no"></iframe>
+  </footer>
+  <script>
+    var unametxt=document.getElementsByClassName("unametxt")[0];
+    var pwdtxt=document.getElementsByClassName("pwdtxt")[0];
+    var emailtxt=document.getElementsByClassName("emailtxt")[0];
+    var phonetxt=document.getElementsByClassName("phonetxt")[0];
+    var addresstxt=document.getElementsByClassName("addresstxt")[0];
+    var regBtn=document.getElementsByClassName("regBtn")[0];
+    function vail(reg,spanImg){
+      if(reg.test(this.value)==true){
+        spanImg.setAttribute("src","img/login/true.jpg")
+        spanImg.style.display="inline";
+        return 1;
+      }else{
+        spanImg.setAttribute("src","img/login/false.jpg");
+        spanImg.style.display="inline";
+        return 0;
+      }
+    }
+    unametxt.onblur=function(){
+      var unameReg=/^\w{3,10}$/;
+      var spanImg1=document.getElementsByClassName("spanImg1")[0];
+      var uname=vail.call(this,unameReg,spanImg1);
+      return uname;
+    }
+    pwdtxt.onblur=function(){
+      var pwdReg=/^\w{6,12}$/;
+      var spanImg2=document.getElementsByClassName("spanImg2")[0];
+      vail.call(this,pwdReg,spanImg2);
+      var pwd=vail.call(this,unameReg,spanImg1);
+      return pwd;
+    }
+    emailtxt.onblur=function(){
+      var emailReg=/^[a-zA-Z0-9]+([-_.][a-zA-Z0-9]+)*@[a-zA-Z0-9]+([-_.][a-zA-Z0-9]+)*\.[a-z]{2,}$/;
+      var spanImg3=document.getElementsByClassName("spanImg3")[0];
+      vail.call(this,emailReg,spanImg3);
+      var email=vail.call(this,unameReg,spanImg1);
+      return email;
+    }
+    addresstxt.onblur=function(){
+      var addressReg=/^[\u4e00-\u9fa5][a-zA-Z-z0-9]$/;
+      var spanImg4=document.getElementsByClassName("spanImg4")[0];
+      vail.call(this,addressReg,spanImg4);
+      var address=vail.call(this,unameReg,spanImg1);
+      return address;
+    }
+    phonetxt.onblur=function(){
+      var phoneReg=/^1[3-9]\d{9}$/;
+      var spanImg5=document.getElementsByClassName("spanImg5")[0];
+      vail.call(this,phoneReg,spanImg5);
+      var phone=vail.call(this,unameReg,spanImg1);
+      return phone;
+    }
+    regBtn.onclick=function(){
+      var inputs=document.querySelectorAll("input");
+      console.log(inputs);
+    }
+  </script>
+</body>
+</html>

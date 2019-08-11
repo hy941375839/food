@@ -2,9 +2,17 @@
   width:110px;
   height:110px;
 }
+table{
+  width:416px;
+  height:258px;
+  margin-left: 30px;
+}
+table tr td{
+  width:100px;
+}
 .table-img{
-  width:420px;
-  height:444px;
+  width:318px;
+  height:278px;
 }
 .text-myself{
   color:#e8ae76;
@@ -20,4 +28,35 @@
 }
 .p-font{
   font-size:0.5rem;
+}
+.user-pic{
+  width:30px;
+  border-radius: 50%;
+}
+.c-ml{
+  margin-left: 14rem;
+}
+.c-mt{
+  margin-top: 2.5rem;
+}
+.utxt,.ptxt{
+  width:250px;
+  border-radius: 5px;
+}
+.btn{
+  color:#000;
+}
+.btn:hover{
+  text-decoration: none;
+  color: #000;
+}
+.btn-color{
+  background-color:#e8ae76;
+  float: right;
+}
+.spanImg,.spanImg1{
+  width:20px;
+  height:20px;
+  margin-top: -10px;
+  display:none;
 }

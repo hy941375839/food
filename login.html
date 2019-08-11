@@ -14,24 +14,86 @@
     <img class="mypic-width" src="img/login/logo4.jpg">
     <p class="mb-0 pt-4 login-font ml-3">欢迎登陆蜜悦</p>
   </div>
-  <div class="d-flex flex-row">
+  <div class="d-flex flex-row c-ml c-mt">
     <img class="table-img" src="img/login/login-bg1.jpg">
-    <table>
-      <tr>
-        <td>
-          <a class="text-myself" href="">登录蜜悦</a>
-        </td>
-        <td>
-          <a class="text-myself" href="">新用户注册</a>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <img class="" src="img/login/user.jpg">
-          <p>用户名：</p>
-        </td>
-      </tr>
-    </table>
+    <div>
+      <div class="d-flex justify-content-between ml-4">
+        <a class="text-myself" href="">登录蜜悦</a>
+        <a class="text-myself" href="">新用户注册</a>
+      </div>
+      <table>
+        <tr>
+          <td>
+            <img class="user-pic" src="img/login/user.jpg">
+            <span>用户名：</span>
+          </td>
+          <td>
+            <input class="utxt" type="text" placeholder="请输入3-10之间字母数字">
+            <span>
+              <img class="spanImg" src="img/login/true.jpg">
+            </span>
+          </td>
+        <tr>
+          <td>
+            <img class="user-pic" src="img/login/pwd.jpg">
+            <span>密码：</span>
+          </td>
+          <td>
+            <input class="ptxt" type="password" placeholder="请输入6-12位数字字母">
+            <span>
+              <img class="spanImg1" src="img/login/true.jpg">
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <input type="checkbox">自动登录
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <a class="btn btn-color" href="javascript:;">登录</a>
+          </td>
+        </tr>
+      </table>
+    </div>
   </div>
+  <footer>
+    <iframe class="footer" src="footer.html" frameborder="0" scrolling="no"></iframe>
+  </footer>
+  <script>
+    var utxt=document.getElementsByClassName("utxt")[0];
+    var ptxt=document.getElementsByClassName("ptxt")[0];
+    var spanImg=document.getElementsByClassName("spanImg")[0];
+    var spanImg1=document.getElementsByClassName("spanImg1")[0];
+    var btn=document.getElementsByClassName("btn")[0];
+    var ureg=/^\w{3,10}$/;
+    var preg=/^\w{6,12}$/;
+    utxt.onblur=function(){
+      if(ureg.test(utxt.value)==true){
+        spanImg.setAttribute("src","img/login/true.jpg")
+        spanImg.style.display="inline";
+      }else{
+        spanImg.setAttribute("src","img/login/false.jpg");
+        spanImg.style.display="inline";
+      }
+    }
+    ptxt.onblur=function(){
+      if(preg.test(ptxt.value)==true){
+        spanImg1.setAttribute("src","img/login/true.jpg")
+        spanImg1.style.display="inline";
+      }else{
+        spanImg1.setAttribute("src","img/login/false.jpg");
+        spanImg1.style.display="inline";
+      }
+    }
+    btn.onclick=function(){
+      if(ureg.test(utxt.value)&&preg.test(ptxt.value)){
+        btn.setAttribute("href","index.html");
+      }else{
+        alert("请确认你输入的用户或密码是否正确");
+      }
+    }
+  </script>
 </body>
 </html>
