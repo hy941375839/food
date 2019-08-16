@@ -51,7 +51,7 @@
               </span>
             </td>
           </tr>
-          <tr>
+          <!-- <tr>
             <td>
               <img class="Img" src="img/reg/地址.png">地址：
             </td>
@@ -61,7 +61,7 @@
                 <img class="spanImg4" src="img/reg/true.jpg">
               </span>
             </td>
-          </tr>
+          </tr> -->
           <tr>
             <td>
               <img class="Img" src="img/reg/联系方式电话.png">联系方式：
@@ -97,7 +97,7 @@
     var pwdtxt=document.getElementsByClassName("pwdtxt")[0];
     var emailtxt=document.getElementsByClassName("emailtxt")[0];
     var phonetxt=document.getElementsByClassName("phonetxt")[0];
-    var addresstxt=document.getElementsByClassName("addresstxt")[0];
+    // var addresstxt=document.getElementsByClassName("addresstxt")[0];
     var regBtn=document.getElementsByClassName("regBtn")[0];
     function vail(reg,spanImg){
       if(reg.test(this.value)==true){
@@ -119,34 +119,38 @@
     pwdtxt.onblur=function(){
       var pwdReg=/^\w{6,12}$/;
       var spanImg2=document.getElementsByClassName("spanImg2")[0];
-      vail.call(this,pwdReg,spanImg2);
-      var pwd=vail.call(this,unameReg,spanImg1);
+      var pwd=vail.call(this,pwdReg,spanImg2);
       return pwd;
     }
     emailtxt.onblur=function(){
       var emailReg=/^[a-zA-Z0-9]+([-_.][a-zA-Z0-9]+)*@[a-zA-Z0-9]+([-_.][a-zA-Z0-9]+)*\.[a-z]{2,}$/;
       var spanImg3=document.getElementsByClassName("spanImg3")[0];
-      vail.call(this,emailReg,spanImg3);
-      var email=vail.call(this,unameReg,spanImg1);
+      var email=vail.call(this,emailReg,spanImg3);
       return email;
     }
-    addresstxt.onblur=function(){
-      var addressReg=/^[\u4e00-\u9fa5][a-zA-Z-z0-9]$/;
-      var spanImg4=document.getElementsByClassName("spanImg4")[0];
-      vail.call(this,addressReg,spanImg4);
-      var address=vail.call(this,unameReg,spanImg1);
-      return address;
-    }
+    // addresstxt.onblur=function(){
+    //   var addressReg=/^\u4e00-\u9fa5$/;
+    //   var spanImg4=document.getElementsByClassName("spanImg4")[0];
+    //   var address=vail.call(this,addressReg,spanImg4);
+    //   return address;
+    // }
     phonetxt.onblur=function(){
       var phoneReg=/^1[3-9]\d{9}$/;
       var spanImg5=document.getElementsByClassName("spanImg5")[0];
-      vail.call(this,phoneReg,spanImg5);
-      var phone=vail.call(this,unameReg,spanImg1);
+      var phone=vail.call(this,phoneReg,spanImg5);
       return phone;
     }
     regBtn.onclick=function(){
       var inputs=document.querySelectorAll("input");
-      console.log(inputs);
+      //console.log(inputs);
+      var arr=[];
+      for(var i=0;i<inputs.length;i++){
+        if(inputs[i].onblur()==0){
+          alert("请认真核对信息，是否全部填写完毕");
+          return;
+        }
+      }
+      regBtn.setAttribute("href","login.html");
     }
   </script>
 </body>
