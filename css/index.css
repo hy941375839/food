@@ -183,11 +183,11 @@ h4{
 }
 .day-list{
   width:1150px;
-  height:500px;
+  height:428px;
   background: #fbda4f;
 }
 .day-contain{
-  height:374px;
+  height:470px;
   margin-left: 100px;
   margin-top: 40px;
 }
@@ -218,6 +218,99 @@ h4{
 .price{
   color:red;
   font-size: 12px;
+}
+.Sales{
+  margin-left: 54px;
+  margin-top: 24px;
+}
+.saleFood{
+  width:1200px;
+}
+.saleFood>ul{
+  list-style: none;
+  display: flex;
+  margin-bottom: 3px;
+}
+.saleFood>ul>li{
+  width:351px;
+  height:320px;
+  background: #fff;
+  margin-right: 3px;
+}
+.saleFood>ul>li img{
+  width:220px;
+  margin-left: 28px;
+  margin-top: 10px;
+}
+.Sales>h4{
+  margin-left: 40px;
+}
+.saleFood>ul>li a{
+  color:#000;
+  font-size: 12px;
+  padding-left: 40px;
+}
+.saleFood>ul>li p{
+  color:red;
+  font-size: 20px;
+  margin-left: 91px;
+}
+.only{
+  margin-left: 40px;
+}
+.bottomImg{
+  margin-left: 38px;
+}
+.bottomImg>img{
+  width:384px;
+}
+.hot{
+  margin-left: 54px;
+  margin-top: 24px;
+}
+.hotFood{
+  width:1200px;
+}
+.hotFood>ul{
+  list-style: none;
+  display: flex;
+  margin-bottom: 3px;
+}
+.hotFood>ul>li span{
+  display: block;
+  width:63px;
+  height:62px;
+  background: url("../img/index/head.png") -383px -338px no-repeat;
+}
+.hotFood>ul>li{
+  width:351px;
+  height:320px;
+  background: #fff;
+  margin-right: 3px;
+}
+.hotFood>ul>li img{
+  width:220px;
+  margin-left: 42px;
+  margin-top: -30px;
+}
+.hotFood>ul>li a{
+  color:#000;
+  font-size: 12px;
+  padding-left: 52px;
+}
+.hotFood>ul>li p{
+  color:red;
+  font-size: 20px;
+  margin-left: 91px;
+}
+.hotBottom{
+  width:1157px;
+  margin-top: 20px;
+  margin-left: 39px;
+}
+.childList{
+  margin-left: 10px;
+  position: absolute;
 }
 
 
